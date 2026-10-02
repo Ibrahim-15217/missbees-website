@@ -1,0 +1,64 @@
+Restaurant & Catering Business Website
+
+1. Home
+    * Business introduction
+    * Featured food/services
+    * Call-to-action buttons
+    * WhatsApp / Call / Enquiry
+2. About the Restaurant
+    * Company story
+    * Mission and values
+    * Restaurant background
+3. Founder / Our Team
+    * Founder information
+    * Staff/team introduction
+    * Photos and short biographies
+4. Our Menu
+    * Food categories
+    * Food names
+    * Descriptions
+    * Prices, if the owner wants them
+    * Food images
+5. Catering Services
+    * Wedding catering
+    * Birthday/event catering
+    * Corporate catering
+    * Private events
+    * Catering packages
+6. Events
+    * Upcoming events
+    * Previous events
+    * Event photographs
+    * Event descriptions
+7. Gallery
+    * Food
+    * Restaurant
+    * Events
+    * Catering setups
+8. News / Updates
+    * New menu announcements
+    * Promotions
+    * Business updates
+    * Events and activities
+9. Testimonials
+    * Customer reviews
+    * Feedback
+10. Contact Us
+
+* Phone
+* Email
+* WhatsApp
+* Address
+* Google Maps
+* Social media
+
+11. Catering Enquiry
+
+* Customer name
+* Email/phone
+* Event type
+* Event date
+* Number of guests
+* Requested service
+* Message
+* Submit enquiry

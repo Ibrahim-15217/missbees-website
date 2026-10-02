@@ -1,0 +1,38 @@
+Customer communication
+
+* Contact form
+* Catering enquiry form
+* WhatsApp button
+* Click-to-call
+* Email button
+
+Business presentation
+
+* Professional gallery
+* Menu
+* Services
+* Events
+* Founder/team
+* Testimonials
+* News/updates
+
+Location
+
+* Google Maps
+* Business address
+* Opening hours
+
+Marketing
+
+* Social media links
+* Newsletter/email collection, if needed
+* Basic SEO
+* Google Analytics/Search Console
+
+User experience
+
+* Mobile responsive
+* Image lightbox for gallery
+* Smooth navigation
+* Search/menu filtering if the menu is large
+* Good loading speed
