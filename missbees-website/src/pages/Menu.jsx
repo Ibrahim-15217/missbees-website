@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import menuItems, { categories } from "../data/menu";
 import PageHero from "../components/PageHero";
+import Seo from "../components/Seo";
 import FilterBar from "../components/FilterBar";
 import FoodCard from "../components/FoodCard";
 import Reveal from "../components/Reveal";
@@ -18,6 +19,11 @@ function Menu() {
 
   return (
     <>
+      <Seo
+        title="Menu & Prices"
+        description="Browse the Missbees menu — jollof rice, grills, soups, pasta and more, prepared fresh daily."
+      />
+
       <PageHero
         crumb="Menu"
         eyebrow="From Our Kitchen"

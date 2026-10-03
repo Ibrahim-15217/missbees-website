@@ -1,5 +1,6 @@
 import restaurant from "../data/restaurant";
 import PageHero from "../components/PageHero";
+import Seo from "../components/Seo";
 import SectionTitle from "../components/SectionTitle";
 import ContactForm from "../components/ContactForm";
 import Reveal from "../components/Reveal";
@@ -96,6 +97,11 @@ const panelItems = [
 function Contact() {
   return (
     <>
+      <Seo
+        title="Contact & Catering Enquiries"
+        description="Contact Missbees Restaurant & Catering by phone, email, WhatsApp or our contact form. Get a catering quote for your event."
+      />
+
       <PageHero
         crumb="Contact"
         eyebrow="Talk to Us"
@@ -176,6 +182,24 @@ function Contact() {
                 <div className="catering-banner__title">Free consultation &amp; tasting available</div>
                 <p className="catering-banner__text">We respond to every catering enquiry within 24 hours.</p>
               </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div className="packages">
+              {restaurant.cateringPackages.map((p) => (
+                <article className={`package-card ${p.popular ? "package-card--popular" : ""}`} key={p.name}>
+                  {p.popular && <span className="package-card__badge">Most Popular</span>}
+                  <h3 className="package-card__name">{p.name}</h3>
+                  <div className="package-card__price">{p.price}</div>
+                  <p className="package-card__suits">{p.suits}</p>
+                  <ul className="package-card__features">
+                    {p.features.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
             </div>
           </Reveal>
 

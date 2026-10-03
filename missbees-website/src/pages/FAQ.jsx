@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import faqs from "../data/faq";
 import PageHero from "../components/PageHero";
+import Seo from "../components/Seo";
 import Reveal from "../components/Reveal";
 
 function FaqItem({ faq, isOpen, onToggle }) {
@@ -37,6 +38,11 @@ function FAQ() {
 
   return (
     <>
+      <Seo
+        title="FAQ"
+        description="Common questions about visiting Missbees — location, opening hours, catering, takeaway and delivery."
+      />
+
       <PageHero
         crumb="FAQ"
         eyebrow="Common Questions"

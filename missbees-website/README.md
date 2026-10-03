@@ -1,16 +1,63 @@
-# React + Vite
+# Missbees Restaurant & Catering — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A single-page-application website for Missbees Restaurant & Catering, built with React + Vite and deployed on Vercel.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite** (Oxc-powered builds)
+- **react-router-dom** for client-side routing
+- Plain CSS design system in `src/index.css` (no UI framework)
 
-## React Compiler
+## Run Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # start dev server at http://localhost:5173
+```
 
-## Expanding the Oxlint configuration
+Other scripts:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run lint     # Oxlint
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+```
+
+## Project Structure
+
+```
+src/
+  components/   UI pieces: Navbar, Footer, Button, FoodCard, ContactForm, Seo, JsonLd, ...
+  pages/        Home, About, Menu, Gallery, FAQ, Contact, NotFound
+  data/         All site content (edit these, not the components):
+                  restaurant.js  — name, contact, hours, socials, services, catering packages
+                  menu.js        — menu items, categories, prices, images
+                  gallery.js     — gallery photos
+                  faq.js         — FAQ entries
+                  testimonials.js— customer quotes
+                  events.js      — upcoming events + news updates
+```
+
+**Tip:** almost all visible text and prices live in `src/data/*`. Update those files to keep content in one place.
+
+## Custom Domain & SEO
+
+- `public/sitemap.xml` and `public/robots.txt` use `https://missbees-website.vercel.app`. Replace with your final domain before launch.
+- Page titles/descriptions are set per-page via the `Seo` component (`src/components/Seo.jsx`).
+- Structured data (Restaurant schema) is injected by `src/components/JsonLd.jsx` in `src/App.jsx`.
+
+## Contact & Catering Forms
+
+Forms run in **demo mode** (responses are only logged to the console) until a form endpoint is added:
+
+1. Create `.env` in this folder (see `.env.example`).
+2. Set `VITE_FORM_ENDPOINT=<your Formspree/Web3Forms/webhook URL>`.
+3. Restart the dev server. The `ContactForm` component posts submissions there.
+
+## Images
+
+Current images are curated stock placeholders from Unsplash (`images.unsplash.com` URLs in `src/data/*`). Replace them with real Missbees photos when available by swapping the `image` fields in the data files.
+
+## Deploy
+
+Connected to Vercel via GitHub. Push to `master` to auto-deploy, or use the Vercel dashboard (Root Directory: `missbees-website`).

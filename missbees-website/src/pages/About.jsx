@@ -1,5 +1,6 @@
 import restaurant from "../data/restaurant";
 import PageHero from "../components/PageHero";
+import Seo from "../components/Seo";
 import SectionTitle from "../components/SectionTitle";
 import Reveal from "../components/Reveal";
 
@@ -31,6 +32,11 @@ const team = [
 function About() {
   return (
     <>
+      <Seo
+        title="About Us"
+        description="The story of Missbees Restaurant & Catering — fresh ingredients, authentic Nigerian recipes and warm hospitality."
+      />
+
       <PageHero
         crumb="About"
         eyebrow="About Us"

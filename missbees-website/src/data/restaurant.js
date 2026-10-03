@@ -46,6 +46,43 @@ const restaurant = {
     { icon: "briefcase", title: "Corporate Catering", text: "Reliable catering for meetings, workshops and events." },
     { icon: "party", title: "Private Events", text: "Intimate, personalised dining for any occasion." },
   ],
+  cateringPackages: [
+    {
+      name: "Private Party",
+      price: "₦80,000",
+      suits: "Birthdays, house parties & casual gatherings",
+      features: [
+        "Choice of 1 rice + 2 sides",
+        "2 proteins (grill + stew)",
+        "Salad and small chops",
+        "Delivery within the city",
+      ],
+    },
+    {
+      name: "Wedding Feast",
+      price: "₦350,000",
+      suits: "Weddings, engagements & receptions",
+      popular: true,
+      features: [
+        "Full jollof + fried rice station",
+        "3 protein choices (including BBQ)",
+        "Small chops, drinks & dessert",
+        "Serving staff included",
+        "Free site visit & tasting",
+      ],
+    },
+    {
+      name: "Corporate Care",
+      price: "From ₦150,000",
+      suits: "Meetings, conferences & office lunches",
+      features: [
+        "Buffet or packed lunch options",
+        "Custom menus for any budget",
+        "Punctual delivery & setup",
+        "On-site support team",
+      ],
+    },
+  ],
 };
 
 export default restaurant;

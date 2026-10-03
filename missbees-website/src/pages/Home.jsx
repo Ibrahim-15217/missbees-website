@@ -3,6 +3,7 @@ import restaurant from "../data/restaurant";
 import menuItems from "../data/menu";
 import galleryItems from "../data/gallery";
 import testimonials from "../data/testimonials";
+import { upcomingEvents, newsItems } from "../data/events";
 import Button from "../components/Button";
 import SectionTitle from "../components/SectionTitle";
 import FoodCard from "../components/FoodCard";
@@ -10,6 +11,7 @@ import GalleryCard from "../components/GalleryCard";
 import OpeningHours from "../components/OpeningHours";
 import Reveal from "../components/Reveal";
 import Icon from "../components/icons";
+import Seo from "../components/Seo";
 
 const heroBg =
   "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80";
@@ -20,6 +22,11 @@ function Home() {
 
   return (
     <>
+      <Seo
+        title="Authentic Nigerian Cuisine & Catering"
+        description="Freshly prepared Nigerian meals, restaurant dining and catering for weddings, birthdays, corporate and private events."
+      />
+
       {/* HERO */}
       <section className="hero">
         <div className="hero__bg" style={{ backgroundImage: `url(${heroBg})` }} aria-hidden="true" />
@@ -216,6 +223,53 @@ function Home() {
                 </blockquote>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EVENTS & NEWS */}
+      <section className="section section--white">
+        <div className="container">
+          <Reveal>
+            <SectionTitle
+              eyebrow="What's Happening"
+              title="Events & News"
+              sub="Come to our next event, or keep up with what is new at Missbees."
+              center
+            />
+          </Reveal>
+          <div className="events-grid">
+            <div>
+              <h3 className="events-col-title">Upcoming Events</h3>
+              {upcomingEvents.map((ev, i) => (
+                <Reveal key={ev.id} delay={i * 100}>
+                  <article className="event-card">
+                    <div className="event-card__date" aria-hidden="true">
+                      <span className="event-card__day">{ev.date.split(" ")[1]}</span>
+                      <span className="event-card__month">{ev.date.split(" ")[0]}</span>
+                    </div>
+                    <div className="event-card__body">
+                      <h4 className="event-card__title">{ev.title}</h4>
+                      <p className="event-card__meta">{ev.location} &middot; {ev.time}</p>
+                      <p className="event-card__text">{ev.text}</p>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+
+            <div>
+              <h3 className="events-col-title">Latest Updates</h3>
+              {newsItems.map((n, i) => (
+                <Reveal key={n.id} delay={i * 100}>
+                  <article className="news-item">
+                    <span className="news-item__date">{n.date}</span>
+                    <h4 className="news-item__title">{n.title}</h4>
+                    <p className="news-item__text">{n.text}</p>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

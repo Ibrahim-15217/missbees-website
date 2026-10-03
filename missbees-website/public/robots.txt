@@ -1,0 +1,6 @@
+# Missbees Restaurant & Catering
+# Replace YOU-ARE-ON-VERCEL-DOMAIN with the production domain when known.
+User-agent: *
+Allow: /
+
+Sitemap: https://missbees-website.vercel.app/sitemap.xml

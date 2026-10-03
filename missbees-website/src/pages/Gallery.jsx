@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import galleryItems, { galleryCategories } from "../data/gallery";
 import PageHero from "../components/PageHero";
+import Seo from "../components/Seo";
 import FilterBar from "../components/FilterBar";
 import GalleryCard from "../components/GalleryCard";
 import Lightbox from "../components/Lightbox";
@@ -20,6 +21,11 @@ function Gallery() {
 
   return (
     <>
+      <Seo
+        title="Gallery"
+        description="View food, restaurant atmosphere, events and the team behind Missbees Restaurant & Catering."
+      />
+
       <PageHero
         crumb="Gallery"
         eyebrow="Our Gallery"
