@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import galleryItems, { galleryCategories } from "../data/gallery";
 import PageHero from "../components/PageHero";
+import FilterBar from "../components/FilterBar";
 import GalleryCard from "../components/GalleryCard";
 import Lightbox from "../components/Lightbox";
 import Reveal from "../components/Reveal";
@@ -28,18 +29,12 @@ function Gallery() {
 
       <section className="section section--cream">
         <div className="container">
-          <div className="filter-bar" role="group" aria-label="Filter gallery by category">
-            {galleryCategories.map((cat) => (
-              <button
-                key={cat}
-                className={`filter-btn ${active === cat ? "active" : ""}`}
-                onClick={() => setActive(cat)}
-                aria-pressed={active === cat}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+<FilterBar
+            label="Filter gallery by category"
+            categories={galleryCategories}
+            active={active}
+            onChange={setActive}
+          />
 
           <div className="grid grid--3">
             {items.map((item, i) => (

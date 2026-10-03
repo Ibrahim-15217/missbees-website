@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import menuItems, { categories } from "../data/menu";
 import PageHero from "../components/PageHero";
+import FilterBar from "../components/FilterBar";
 import FoodCard from "../components/FoodCard";
 import Reveal from "../components/Reveal";
 
@@ -26,18 +27,12 @@ function Menu() {
 
       <section className="section section--cream">
         <div className="container">
-          <div className="filter-bar" role="group" aria-label="Filter menu by category">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`filter-btn ${active === cat ? "active" : ""}`}
-                onClick={() => setActive(cat)}
-                aria-pressed={active === cat}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+          <FilterBar
+            label="Filter menu by category"
+            categories={categories}
+            active={active}
+            onChange={setActive}
+          />
 
           {items.length === 0 ? (
             <p className="notice" style={{ textAlign: "center" }}>
