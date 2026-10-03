@@ -67,7 +67,7 @@ function Navbar() {
             </NavLink>
           ))}
           <div className="nav__cta">
-            <Button to="/menu" variant="gold" size="sm">
+            <Button to="/menu" variant="gold" size="sm" onClick={close}>
               View Menu
             </Button>
           </div>

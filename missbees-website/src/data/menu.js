@@ -56,7 +56,7 @@ const menuItems = [
     description: "Succulent chunks of beef or goat simmered in pepper sauce.",
     price: 2500,
     badge: "Spicy",
-    image: u("photo-1515516969-d400822cc703"),
+    image: u("photo-1604908176997-125f25cc6f3d"),
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ const menuItems = [
     category: "Main Courses",
     description: "Crispy fried chicken with golden fries and ketchup.",
     price: 5000,
-    image: u("photo-1544989169-9bf6a36a5fdb"),
+    image: u("photo-1562967914-608f82629710"),
   },
   {
     id: 9,
